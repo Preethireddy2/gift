@@ -1,0 +1,2166 @@
+/* =====================================================
+   KEDAR BIRTHDAY WEBSITE
+   GLOBAL STYLES
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#050505;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top,#2d1c07 0%,#090909 45%,#000 100%);
+
+    z-index:-3;
+
+}
+
+/* Golden Glow */
+
+.background-glow{
+
+    position:fixed;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:rgba(255,190,60,.08);
+
+    filter:blur(120px);
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:-2;
+
+}
+
+/* ===========================
+   FLOATING PARTICLES
+=========================== */
+
+#particles{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:#d6b35b;
+
+    opacity:.7;
+
+    animation:floatParticle linear infinite;
+
+}
+
+@keyframes floatParticle{
+
+0%{
+
+transform:translateY(100vh);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120px);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   INTRO PAGE
+=========================== */
+
+.intro{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.intro-content{
+
+    max-width:800px;
+
+}
+
+.loading{
+
+    letter-spacing:4px;
+
+    color:#d9b25e;
+
+    margin-bottom:30px;
+
+    font-size:15px;
+
+}
+
+.title{
+
+    font-size:90px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#f6d58a;
+
+    letter-spacing:10px;
+
+    margin-bottom:20px;
+
+}
+
+.subtitle{
+
+    color:#ddd;
+
+    font-size:20px;
+
+    margin-bottom:45px;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.start-btn,
+.next-btn,
+.back-btn,
+.celebrate-btn,
+.replay-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    margin:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.start-btn,
+.next-btn,
+.celebrate-btn{
+
+    background:#d8b36a;
+
+    color:#111;
+
+}
+
+.start-btn:hover,
+.next-btn:hover,
+.celebrate-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 30px rgba(216,179,106,.55);
+
+}
+
+.back-btn,
+.replay-btn{
+
+    background:transparent;
+
+    border:2px solid #d8b36a;
+
+    color:#d8b36a;
+
+}
+
+.back-btn:hover,
+.replay-btn:hover{
+
+    background:#d8b36a;
+
+    color:black;
+
+}
+
+/* ===========================
+   PAGE LAYOUT
+=========================== */
+
+section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 25px;
+
+}
+
+.navigation{
+
+    margin-top:60px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   COMMON CARD
+=========================== */
+
+.report-box,
+.scan-box,
+.adventure-box,
+.memory-box,
+.birthday-box{
+
+    width:100%;
+
+    max-width:1100px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(14px);
+
+    border-radius:25px;
+
+    padding:50px;
+
+    box-shadow:0 0 40px rgba(0,0,0,.45);
+
+}
+/* =====================================================
+   REPORT PAGE
+===================================================== */
+
+.report-page,
+.scan-page{
+
+    padding:80px 20px;
+
+}
+
+.classified,
+.warning{
+
+    text-align:center;
+
+    color:#ffcc66;
+
+    letter-spacing:3px;
+
+    font-size:16px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+.glitch{
+
+    font-family:'Space Mono',monospace;
+
+    font-size:70px;
+
+    text-align:center;
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 10px #d8b36a,
+    0 0 20px #d8b36a,
+    0 0 40px #d8b36a;
+
+    animation:glitch 2s infinite;
+
+}
+
+@keyframes glitch{
+
+0%,100%{
+
+transform:translate(0);
+
+}
+
+20%{
+
+transform:translate(-2px,2px);
+
+}
+
+40%{
+
+transform:translate(2px,-2px);
+
+}
+
+60%{
+
+transform:translate(-2px,-2px);
+
+}
+
+80%{
+
+transform:translate(2px,2px);
+
+}
+
+}
+
+.report-box h2,
+.scan-box h2{
+
+    text-align:center;
+
+    color:#d8b36a;
+
+    margin:30px 0;
+
+}
+
+.scan-title{
+
+    text-align:center;
+
+    color:#ccc;
+
+    margin-bottom:35px;
+
+    font-size:18px;
+
+}
+
+/* =====================================================
+   ERROR BOX
+===================================================== */
+
+.error-box{
+
+    margin-top:35px;
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.line{
+
+    background:#101010;
+
+    border-left:5px solid #d8b36a;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    transition:.35s;
+
+}
+
+.line:hover{
+
+    transform:translateX(10px);
+
+    background:#181818;
+
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats{
+
+    margin-top:40px;
+
+}
+
+.stat{
+
+    margin-bottom:30px;
+
+}
+
+.stat p{
+
+    margin-bottom:10px;
+
+    color:#f3d79b;
+
+}
+
+.bar{
+
+    height:15px;
+
+    background:#1a1a1a;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.bar span{
+
+    display:block;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#d8b36a,#ffe08a);
+
+    border-radius:30px;
+
+}
+
+/* =====================================================
+   VERDICT
+===================================================== */
+
+.verdict{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    color:#ffffff;
+
+    line-height:2;
+
+    font-size:28px;
+
+}
+
+/* =====================================================
+   TERMINAL
+===================================================== */
+
+.terminal{
+
+    background:#050505;
+
+    border:1px solid #2d2d2d;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin:40px 0;
+
+    font-family:'Space Mono',monospace;
+
+}
+
+.terminal p{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #222;
+
+    color:#ffffff;
+
+}
+
+.terminal p:last-child{
+
+    border-bottom:none;
+
+}
+
+.terminal span{
+
+    color:#63ff7c;
+
+    font-weight:bold;
+
+}
+
+/* =====================================================
+   COMPLAINTS
+===================================================== */
+
+.complaints{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.complaint{
+
+    background:#111;
+
+    border:1px solid rgba(216,179,106,.2);
+
+    border-radius:15px;
+
+    padding:25px;
+
+    transition:.35s;
+
+}
+
+.complaint:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d8b36a;
+
+    box-shadow:0 0 20px rgba(216,179,106,.3);
+
+}
+
+/* =====================================================
+   FINAL REPORT
+===================================================== */
+
+.final-report{
+
+    margin-top:50px;
+
+    background:#0d0d0d;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border:1px solid rgba(216,179,106,.25);
+
+}
+
+.final-report h2{
+
+    color:#ffe08a;
+
+    margin-bottom:25px;
+
+}
+
+.result{
+
+    font-family:'Space Mono',monospace;
+
+    line-height:2;
+
+    color:#f8f8f8;
+
+    font-size:18px;
+
+}
+
+.final-report h1{
+
+    margin-top:35px;
+
+    color:#d8b36a;
+
+    font-size:40px;
+
+}
+
+/* =====================================================
+   HOVER EFFECTS
+===================================================== */
+
+.report-box,
+.scan-box{
+
+    transition:.4s;
+
+}
+
+.report-box:hover,
+.scan-box:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+.glitch{
+
+    font-size:45px;
+
+}
+
+.report-box,
+.scan-box{
+
+    padding:30px;
+
+}
+
+.final-report h1{
+
+    font-size:28px;
+
+}
+
+.verdict{
+
+    font-size:22px;
+
+}
+
+.terminal{
+
+    font-size:13px;
+
+}
+
+}
+/* =====================================================
+   ADVENTURE PAGE
+===================================================== */
+
+.adventure-page{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(to bottom,#02101d,#06273f,#03131f);
+
+}
+
+/* ===========================
+   WATER OVERLAY
+=========================== */
+
+.water-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(rgba(0,180,255,.05),rgba(0,0,0,.25));
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   FLOATING BUBBLES
+=========================== */
+
+.bubbles{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    top:0;
+
+    left:0;
+
+    pointer-events:none;
+
+}
+
+.bubbles span{
+
+    position:absolute;
+
+    bottom:-120px;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.4);
+
+    animation:bubbleUp linear infinite;
+
+}
+
+.bubbles span:nth-child(1){
+
+left:10%;
+width:18px;
+height:18px;
+animation-duration:10s;
+
+}
+
+.bubbles span:nth-child(2){
+
+left:28%;
+width:25px;
+height:25px;
+animation-duration:13s;
+
+}
+
+.bubbles span:nth-child(3){
+
+left:45%;
+width:15px;
+height:15px;
+animation-duration:9s;
+
+}
+
+.bubbles span:nth-child(4){
+
+left:63%;
+width:22px;
+height:22px;
+animation-duration:12s;
+
+}
+
+.bubbles span:nth-child(5){
+
+left:82%;
+width:28px;
+height:28px;
+animation-duration:15s;
+
+}
+
+.bubbles span:nth-child(6){
+
+left:92%;
+width:16px;
+height:16px;
+animation-duration:11s;
+
+}
+
+@keyframes bubbleUp{
+
+0%{
+
+transform:translateY(0) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.4);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   ADVENTURE BOX
+=========================== */
+
+.adventure-box{
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.chapter{
+
+    color:#8ddcff;
+
+    letter-spacing:5px;
+
+    margin-bottom:20px;
+
+    font-size:15px;
+
+}
+
+.adventure-box h1{
+
+    font-size:60px;
+
+    color:#ffffff;
+
+    margin-bottom:30px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.quote{
+
+    max-width:750px;
+
+    margin:auto;
+
+    line-height:2;
+
+    color:#d9ecff;
+
+    font-size:19px;
+
+}
+
+/* ===========================
+   PHOTO
+=========================== */
+
+.dive-photo{
+
+    width:100%;
+
+    max-width:600px;
+
+    margin:50px auto;
+
+    display:block;
+
+    border-radius:25px;
+
+    border:5px solid rgba(255,255,255,.15);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.5),
+
+    0 0 25px rgba(0,180,255,.25);
+
+    transition:.5s;
+
+}
+
+.dive-photo:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.small-text{
+
+    margin-top:30px;
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#ffffff;
+
+}
+
+.small-text strong{
+
+    color:#7de3ff;
+
+}
+
+/* ===========================
+   CAT BOX
+=========================== */
+
+/* Floating Cat Bubble */
+
+.cat-bubble {
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+
+    width: 170px;
+    padding: 12px;
+
+    background: rgba(255,255,255,0.85);
+    border-radius: 30px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+    text-align: center;
+
+    z-index: 999;
+
+    animation: floatCat 3s ease-in-out infinite;
+}
+
+
+.cat-bubble img {
+
+    width: 120px;
+    height: 120px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+
+.cat-text {
+
+    font-size: 13px;
+    margin-top: 8px;
+
+    font-family: 'Comic Sans MS', cursive;
+
+    color: #444;
+
+}
+
+
+/* cute floating movement */
+
+@keyframes floatCat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+/* ===========================
+   GLOW
+=========================== */
+
+.adventure-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:rgba(0,170,255,.08);
+
+    filter:blur(80px);
+
+    top:-100px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:-1;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.adventure-box h1{
+
+font-size:38px;
+
+}
+
+.quote{
+
+font-size:17px;
+
+}
+
+.small-text{
+
+font-size:17px;
+
+}
+
+.cat-box{
+
+padding:20px;
+
+}
+
+.dive-photo{
+
+max-width:100%;
+
+}
+
+}
+/* =====================================================
+   MEMORIES PAGE
+===================================================== */
+
+.memories-page{
+
+    background:linear-gradient(180deg,#120b06,#1c1208,#090909);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   MEMORY BOX
+=========================== */
+
+.memory-box{
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.memory-title{
+
+    font-size:60px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#ffd27a;
+
+    margin-bottom:15px;
+
+}
+
+.memory-subtitle{
+
+    color:#dddddd;
+
+    font-size:18px;
+
+    margin-bottom:50px;
+
+}
+
+/* ===========================
+   MEMORY WALL
+=========================== */
+
+.memory-wall{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+
+    margin:50px 0;
+
+}
+
+/* ===========================
+   POLAROID CARD
+=========================== */
+
+.polaroid{
+
+    background:white;
+
+    color:black;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.45);
+
+    transition:.4s;
+
+    transform:rotate(-2deg);
+
+}
+
+.polaroid:nth-child(even){
+
+    transform:rotate(2deg);
+
+}
+
+.polaroid:hover{
+
+    transform:scale(1.05) rotate(0deg);
+
+    box-shadow:0 25px 50px rgba(216,179,106,.4);
+
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+.polaroid img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:5px;
+
+}
+
+/* ===========================
+   CAPTION
+=========================== */
+
+.caption{
+
+    margin-top:15px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#333;
+
+    line-height:1.6;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   AUDIO PLAYER
+=========================== */
+
+.voice-message{
+
+    margin-top:60px;
+
+}
+
+.voice-message h2{
+
+    color:#ffd27a;
+
+    margin-bottom:20px;
+
+}
+
+.voice-message audio{
+
+    width:100%;
+
+    max-width:500px;
+
+}
+
+/* ===========================
+   MEMORY NOTE
+=========================== */
+
+.memory-note{
+
+    margin-top:60px;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,210,122,.25);
+
+}
+
+.memory-note p{
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    line-height:2;
+
+    font-style:italic;
+
+}
+
+/* ===========================
+   GOLDEN GLOW
+=========================== */
+
+.memory-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    border-radius:50%;
+
+    background:rgba(255,210,122,.08);
+
+    filter:blur(100px);
+
+    top:-120px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:-1;
+
+}
+
+/* ===========================
+   FLOAT ANIMATION
+=========================== */
+
+.polaroid{
+
+    animation:floatPhoto 6s ease-in-out infinite;
+
+}
+
+.polaroid:nth-child(2){
+
+    animation-delay:1s;
+
+}
+
+.polaroid:nth-child(3){
+
+    animation-delay:2s;
+
+}
+
+.polaroid:nth-child(4){
+
+    animation-delay:3s;
+
+}
+
+@keyframes floatPhoto{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.memory-title{
+
+font-size:40px;
+
+}
+
+.memory-subtitle{
+
+font-size:16px;
+
+}
+
+.memory-note p{
+
+font-size:18px;
+
+}
+
+.polaroid img{
+
+height:220px;
+
+}
+
+}
+/* =====================================================
+   BIRTHDAY PAGE
+===================================================== */
+
+.birthday-page{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 20px;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#3d2508 0%,#120c08 45%,#050505 100%);
+
+}
+
+/* ===========================
+   BIRTHDAY BOX
+=========================== */
+
+.birthday-box{
+
+    text-align:center;
+
+    position:relative;
+
+    max-width:900px;
+
+}
+
+.birthday-title{
+
+    font-size:70px;
+
+    color:#ffd36d;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 15px rgba(255,211,109,.5);
+
+}
+
+.birthday-message{
+
+    font-size:22px;
+
+    color:#eeeeee;
+
+    line-height:2;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.birthday-message strong{
+
+    color:#ffd36d;
+
+}
+
+/* ===========================
+   HEART
+=========================== */
+
+.heart-animation{
+
+    font-size:90px;
+
+    margin:45px 0;
+
+    animation:heartbeat 1.5s infinite;
+
+}
+
+@keyframes heartbeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+25%{
+
+transform:scale(1.25);
+
+}
+
+50%{
+
+transform:scale(1);
+
+}
+
+75%{
+
+transform:scale(1.15);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.celebrate-btn{
+
+    margin-top:20px;
+
+    min-width:240px;
+
+}
+
+.replay-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    min-width:240px;
+
+}
+
+/* ===========================
+   FLOATING HEARTS
+=========================== */
+
+.floating-heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    font-size:25px;
+
+    animation:heartFloat linear forwards;
+
+    pointer-events:none;
+
+    z-index:999;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(0) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-110vh) scale(1.8);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   GOLDEN GLOW
+=========================== */
+
+.birthday-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(255,210,120,.12);
+
+    filter:blur(120px);
+
+    left:50%;
+
+    top:-150px;
+
+    transform:translateX(-50%);
+
+    z-index:-1;
+
+}
+
+/* ===========================
+   STAR SPARKLES
+=========================== */
+
+.star{
+
+    position:fixed;
+
+    color:#ffd36d;
+
+    font-size:20px;
+
+    animation:twinkle 2s infinite;
+
+    pointer-events:none;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+
+transform:scale(.8);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.4);
+
+}
+
+}
+
+/* ===========================
+   FINAL FADE
+=========================== */
+
+.fade-in{
+
+    animation:fadeIn 1.5s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.birthday-title{
+
+font-size:42px;
+
+}
+
+.birthday-message{
+
+font-size:18px;
+
+}
+
+.heart-animation{
+
+font-size:65px;
+
+}
+
+.celebrate-btn,
+.replay-btn{
+
+width:100%;
+
+}
+
+}
+/* =====================================================
+   PART 6
+   ANIMATIONS • EFFECTS • LOADER • RESPONSIVE
+===================================================== */
+
+/* ===========================
+   LOADER
+=========================== */
+
+.loading{
+
+    animation:pulse 1.2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+opacity:.3;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:.3;
+
+}
+
+}
+
+/* ===========================
+   PAGE FADE
+=========================== */
+
+section{
+
+    animation:pageFade 1s ease;
+
+}
+
+@keyframes pageFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   REVEAL EFFECT
+=========================== */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ===========================
+   CONFETTI
+=========================== */
+
+.confetti{
+
+position:fixed;
+
+width:12px;
+
+height:18px;
+
+top:-20px;
+
+z-index:9999;
+
+pointer-events:none;
+
+border-radius:3px;
+
+animation:confettiFall linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(110vh)
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   FIREWORK SPARK
+=========================== */
+
+.spark{
+
+position:fixed;
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:#ffd36d;
+
+box-shadow:
+
+0 0 15px #ffd36d,
+
+0 0 30px #ffd36d;
+
+pointer-events:none;
+
+z-index:9999;
+
+}
+
+/* ===========================
+   FLOATING HEARTS
+=========================== */
+
+.heart{
+
+position:fixed;
+
+font-size:28px;
+
+pointer-events:none;
+
+z-index:9999;
+
+animation:heartFly 2s ease-out forwards;
+
+}
+
+@keyframes heartFly{
+
+0%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(-250px)
+scale(2);
+
+}
+
+}
+
+/* ===========================
+   SPARKLES
+=========================== */
+
+.sparkle{
+
+position:fixed;
+
+font-size:18px;
+
+pointer-events:none;
+
+z-index:9999;
+
+animation:sparkleMove 1.2s ease-out forwards;
+
+}
+
+@keyframes sparkleMove{
+
+0%{
+
+opacity:1;
+
+transform:scale(0);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(-70px)
+scale(1.5);
+
+}
+
+}
+
+/* ===========================
+   HOVER EFFECTS
+=========================== */
+
+img{
+
+transition:.4s;
+
+}
+
+img:hover{
+
+transform:scale(1.03);
+
+}
+
+button{
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#090909;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#d8b36a;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#f5d78c;
+
+}
+
+/* ===========================
+   TEXT SELECTION
+=========================== */
+
+::selection{
+
+background:#d8b36a;
+
+color:#111;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+text-decoration:none;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:900px){
+
+.report-box,
+.scan-box,
+.adventure-box,
+.memory-box,
+.birthday-box{
+
+padding:30px;
+
+}
+
+.navigation{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.start-btn,
+.next-btn,
+.back-btn,
+.celebrate-btn,
+.replay-btn{
+
+width:100%;
+
+max-width:320px;
+
+margin:auto;
+
+}
+
+.title{
+
+font-size:60px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.title{
+
+font-size:42px;
+
+letter-spacing:3px;
+
+}
+
+.memory-wall{
+
+grid-template-columns:1fr;
+
+}
+
+.glitch{
+
+font-size:34px;
+
+}
+
+.adventure-box h1{
+
+font-size:34px;
+
+}
+
+.birthday-title{
+
+font-size:36px;
+
+}
+
+.quote,
+.birthday-message,
+.memory-note p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+}
+
+/* =====================================================
+   END OF FILE
+===================================================== */
